@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>ARQ Construtora</title>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1f2937;
+      background-color: #f0f4f8;
+      scroll-behavior: smooth;
+    }
+
+    /* Tela inicial (logo central) */
+    .intro {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #e0f2fe, #f0f9ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+
+    .intro img {
+      width: 300px;
+      opacity: 0.95;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .intro h1 {
+      margin-top: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Fundo fixo com logo suave nas seções */
+    body::before {
+      content: "";
+      background: url('./imagem logo.png') no-repeat center center fixed;
+      background-size: 500px;
+      opacity: 0.05;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Cabeçalho */
+    header {
+      backdrop-filter: blur(10px);
+    }
+
+    /* Cartões brancos */
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      padding: 2.5rem;
+    }
+
+    /* Botões */
+    .btn-principal {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 12px 34px;
+      border-radius: 8px;
+      background-color: #38bdf8;
+      color: #111;
+      box-shadow: 0 4px 10px rgba(56,189,248,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-principal:hover {
+      background-color: #0284c7;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(2,132,199,0.4);
+    }
+
+    /* WhatsApp fixo */
+    .whatsapp-fixo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+      background-color: #25D366;
+      padding: 14px 18px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .whatsapp-fixo:hover {
+      background-color: #1DA851;
+      transform: scale(1.1);
+    }
+
+    h2, h3 {
+      color: #111827;
+      letter-spacing: -0.5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="fixed top-0 left-0 w-full bg-white/90 shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-gray-900 cursor-pointer transition-transform duration-300"
+          onmouseover="this.style.transform='scale(1.1)';"
+          onmouseout="this.style.transform='scale(1)'">
+        ARQ CONSTRUTORA
+      </h1>
+
+      <nav class="flex space-x-6 text-base font-medium">
+        <a href="#hero" class="hover:text-sky-600">Início</a>
+        <a href="#sobre" class="hover:text-sky-600">Serviços</a>
+        <a href="#contato" class="hover:text-sky-600">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Tela inicial -->
+  <section class="intro" id="inicio">
+    <img src="./imagem logo.png" alt="Logo ARQ Construtora">
+    <h1>ARQ CONSTRUTORA</h1>
+    <a href="#hero" class="mt-8 inline-block px-8 py-3 bg-sky-400 text-white font-semibold rounded-lg hover:bg-sky-600 transition">
+      Entrar no Site
+    </a>
+  </section>
+
+  <!-- Seção Hero -->
+  <section id="hero" class="pt-36 pb-24 text-center px-6">
+    <div class="max-w-3xl mx-auto card">
+      <h2 class="text-4xl font-extrabold mb-6 text-gray-900">Sobre a ARQ Construtora</h2>
+
+      <p class="mb-4 text-gray-700 text-lg">
+        Embora a <strong>ARQ</strong> seja uma empresa recente no nome, ela carrega mais de 
+        <strong>20 anos de experiência</strong> em cada projeto. Fundada por um profissional que cresceu e construiu sua trajetória na área da construção civil, a ARQ nasce com a missão de entregar obras com qualidade, confiança e compromisso — do início ao fim.
+      </p>
+
+      <p class="mb-4 text-gray-700 text-lg">
+        Nosso diferencial está no <strong>conhecimento prático de quem entende cada etapa de uma obra</strong>. 
+        O fundador da ARQ sabe fazer desde o alicerce até o acabamento final. E se em algum momento surgir algo fora da sua especialidade, ele sabe exatamente 
+        <strong>quem chamar</strong>: profissionais de confiança, com quem já trabalhou ao longo dos anos.
+      </p>
+
+      <p class="mb-6 text-gray-700 text-lg">
+        Na ARQ, acreditamos que construir é mais do que levantar paredes. É criar espaços com responsabilidade, 
+        respeitando prazos, orçamentos e os sonhos de cada cliente.
+      </p>
+
+      <p class="italic mb-10 text-gray-600 text-lg">ARQ Construtora — experiência que constrói.</p>
+
+      <a href="https://wa.me/5562991610839" target="_blank" class="btn-principal">
+        Solicitar Orçamento
+      </a>
+    </div>
+  </section>
+
+  <!-- Seção de Serviços -->
+  <section id="sobre" class="py-24 px-8 text-center">
+    <div class="max-w-3xl mx-auto card">
+      <h3 class="text-3xl font-bold mb-6 text-gray-900">Nossos Serviços de Construção</h3>
+
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Na <strong>ARQ Construtora</strong>, executamos todos os serviços da área de construção civil, desde a fundação até o acabamento. 
+        Atuamos em obras residenciais, comerciais, reformas, ampliações e manutenções, sempre com mão de obra qualificada e foco em qualidade.
+        <br><br>
+        Oferecemos serviços completos de alvenaria, estrutura, hidráulica, elétrica, pintura, revestimentos, gesso e muito mais.
+        Quando necessário, contamos com parceiros de confiança para garantir que tudo seja entregue com excelência.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção de Contato -->
+  <section id="contato" class="py-24 px-8 text-center bg-gray-50">
+    <div class="max-w-3xl mx-auto card">
+      <h3 class="text-3xl font-bold mb-6 text-gray-900">Fale Conosco</h3>
+
+      <p class="text-gray-700 mb-8 text-lg leading-relaxed">
+        Entre em contato conosco pelo WhatsApp e solicite seu orçamento agora mesmo.
+      </p>
+
+      <a href="https://wa.me/5562991610839" target="_blank" class="btn-principal bg-[#25D366] hover:bg-[#1DA851] text-white shadow-md">
+        📲 Solicitar Orçamento via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900 text-gray-200 text-center py-8 mt-10">
+    <p class="mb-2 font-semibold">ARQ Construtora © 2025</p>
+    <p class="text-sm">Construindo com qualidade, confiança e experiência.</p>
+  </footer>
+
+  <!-- Botão de WhatsApp fixo -->
+  <a href="https://wa.me/5562991610839" target="_blank" class="whatsapp-fixo" title="Fale conosco pelo WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="28">
+  </a>
+
+</body>
+</html>
+
